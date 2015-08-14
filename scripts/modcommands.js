@@ -687,6 +687,10 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         script.unban("smute", src, tar, commandData);
         return;
     }
+    if (command == "warn") {
+		normalbot.sendAll("" + commandData + " was warned by " + nonFlashing(sys.name(src)) + "! [Channel: " + sys.channel(channel) + "]");
+		return;
+	}
     return "no command";
 };
 exports.help = 
