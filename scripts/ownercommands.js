@@ -757,20 +757,7 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         });
         return;
     }
-    if (command == "updateleague") {
-        var updateURL = Config.base_url + "league.json";
-        sys.webCall(updateURL, function(resp) {
-            try { 
-                script.league = JSON.parse(resp).league;
-                sys.write(Config.dataDir+"league.json", resp);
-                normalbot.sendMessage(src, "League file updated!", channel);
-            }
-            catch (e) {
-                normalbot.sendMessage(src, "There was an error with the league file", channel);
-            }
-        });
-        return;
-    }
+    
     return "no command";
 };
 exports.help = 
