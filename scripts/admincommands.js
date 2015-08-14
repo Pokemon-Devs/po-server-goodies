@@ -346,8 +346,8 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
     }
     // hack, for allowing some subset of the owner commands for super admins
     if (isSuperAdmin(src)) {
-       if (["changeauth"].indexOf(command) != -1) {
-           normalbot.sendMessage(src, "Can't aboos some commands", channel);
+       if (["unlockdown"].indexOf(command) != -1) {
+           normalbot.sendMessage(src, "Don't even bother", channel);
            return;
        }
        return require("ownercommands.js").handleCommand(src, command, commandData, tar, channel);
