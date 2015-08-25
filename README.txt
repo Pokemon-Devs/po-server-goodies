@@ -2,7 +2,7 @@ This repository contains scripts.js and tiers.xml used in Pokemon Online Server.
 
 *** Installation instructions ***
 
-Download as .zip (https://github.com/po-devs/po-server-goodies/zipball/master) or tarball,
+Download as .zip (https://github.com/NightmareScripting/po-server-goodies/zipball/master) or tarball,
 extract into the same folder with Pokemon-Online server executable.
 Note: some builds on Windows systems (2.0.0x) are missing the SSL libraries making
 the scripts impossible to reload from Github. (/updatescripts, /updatetiers etc.)
@@ -24,4 +24,3 @@ In particular, following practices are frowned upon:
 - trailing whitespace
 - undefined variables (always use var in the outermost scope for that variable)
 
-Full list of contributors here: https://github.com/po-devs/po-server-goodies/graphs/contributors
