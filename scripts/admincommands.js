@@ -352,59 +352,10 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
        }
        return require("ownercommands.js").handleCommand(src, command, commandData, tar, channel);
     }
-    if (command == "lockdown") {
-		if (isSuperAdmin(src)) {
-			sys.stopEvent();
-		}
-		else;
-		normalbot.sendAll("The server is now on a lockdown!");
-		return;
-	}
-	if (command == "unlockdown") {
-		if (isSuperAdmin(src)) {
-			sys.stopEvent();
-		}
-		else;
-		normalbot.sendAll("The server is now not on a lockdown.");
-		return;
-	}
-	if (command == "shutdown") {
-		if (isSuperAdmin(src)) {
-			sys.stopEvent();
-		}
-		else;
-		sys.shutDown();
-		return; //This isn't needed but lol
-	}
-	if (command == "clearchat") {
-		if (isSuperAdmin(src)) {
-			sys.stopEvent();
-		}
-		else;
-		sys.clearChat();
-		print("-- " + sys.name(src) + " cleared the server chat");
-		return;
-	}
-	if (command == "forcepublicserver") {
-		if (isSuperAdmin(src)) {
-			sys.stopEvent();
-		}
-		else;
-		sys.makeServerPublic(true);
-		normalbot.sendAll("The server was made public.");
-		print("-- " + sys.name(src) + " made the server public.");
-		return;
-	}
-	if (command == "forceprivateserver") {
-		if (isSuperAdmin(src)) {
-			sys.stopEvent();
-		}
-		else;
-		sys.makeServerPublic(false);
-		normalbot.sendAll("The server was made private.");
-		print("-- " + sys.name(src) + " made the server private.");
-		return;
-	}
+    if (command == "forcerename" || command == "rename") {
+    	sys.changeName(commandData, commandData);
+    	return;
+    }
 
     return "no command";
 };
