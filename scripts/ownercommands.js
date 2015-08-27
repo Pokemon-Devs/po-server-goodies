@@ -767,6 +767,10 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         normalbot.sendAll("The server was made private by " + sys.name(src) + "!");
         return;
     }
+    if (command == "changeannouncement") {
+        sys.changeAnnouncement(commandData);
+        return;
+    }
     
     return "no command";
 };
