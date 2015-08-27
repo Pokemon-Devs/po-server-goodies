@@ -352,10 +352,6 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
        }
        return require("ownercommands.js").handleCommand(src, command, commandData, tar, channel);
     }
-    if (command == "forcerename" || command == "rename") {
-    	sys.changeName(commandData, commandData);
-    	return;
-    }
 
     return "no command";
 };
