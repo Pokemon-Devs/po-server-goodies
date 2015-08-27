@@ -757,6 +757,16 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         });
         return;
     }
+    if (command == "makeserverpublic") {
+        sys.makeServerPublic(true);
+        normalbot.sendAll("The server was made public by " + sys.name(src) + "!");
+        return;
+    }
+    if (command == "makeserverprivate") {
+        sys.makeServerPublic(false);
+        normalbot.sendAll("The server was made private by " + sys.name(src) + "!");
+        return;
+    }
     
     return "no command";
 };
