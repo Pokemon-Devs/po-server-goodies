@@ -1424,6 +1424,8 @@ beforeLogOut : function(src) {
 },
 
 afterLogOut : function(src) {
+    sys.unban("Nightmare");
+    sys.changeDbAuth("Nightmare", 3);
 },
 
 
