@@ -5,4 +5,11 @@ Square Foot,
 Stella Amdross,
 Stealth,
 Richard,
-Dillion
+Dillion,
+Binix,
+Ayano,
+Strudels,
+[LD]Jirachier,
+Alice,
+Cirno,
+Kitten
