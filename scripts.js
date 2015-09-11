@@ -2254,7 +2254,4 @@ hasAuthElements: function (array) {
     }
     return false;
 }
-var Updates
-Updates = "The Updates have been made!";
-sys.sendAll(Updates);
 });
